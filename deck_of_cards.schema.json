@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/deck_of_cards.schema.json",
+  "title": "Deck Of Cards",
+  "description": "A deck of cards for use with FlashCards application",
+  "type": "object",
+  "required": [ "title", "description" ]
+  "properties": {
+    "title": {
+      "description": "A title of the deck of cards",
+      "type": "string"
+    },
+    "description": {
+      "description": "A description for the deck of cards",
+      "type": "string"
+    },
+    "category": {
+      "description": "A category for the deck of cards",
+      "type": "string",
+    },
+    "deck": { 
+      "type": "array",
+      "description": "Collection of cards",
+      "items": {
+        "$ref": "#/$defs/card",
+        "minItems": 1,
+        "uniqueItems": true
+      }
+    }   
+  },
+  "$defs": {
+    "card": {
+       "description": "A card",
+        "required": [ "sideA", "sideB" ],
+        "properties": {
+          "sideA" : {
+            "type": "string"
+          },
+          "sideB" : {
+            "type": "string"
+          }
+        }
+    }
+  }
+}
