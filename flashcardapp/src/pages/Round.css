@@ -1,0 +1,44 @@
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    height: 40rem;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.card-slot {
+    align-items: stretch;
+    flex-direction: column;
+    display: flex;
+    flex: 20;
+}
+
+.actionbar-slot {
+    position: relative;
+    bottom: 6rem;
+    padding: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.side {
+    font-size: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-left {
+    flex: 1;
+}
+
+.flex-right {
+    align-self: end;
+}
